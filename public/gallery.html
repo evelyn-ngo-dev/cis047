@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Cinnamoroll Gallery</title>
+    <link rel="stylesheet" href="/css/gallery.css">
+    <script src="/js/gallery.js" defer></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="list">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="/documents/Evelyn_Ngo_Resume.pdf">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1 id="gallery-photos">Gallery of Cinnamorolls!</h1>
+    </header>
+    <section aria-labelledby="gallery-photos">  
+        <label for="photo-filter">Filter Photos:</label>
+        <input id="photo-filter" type="text" autocomplete="off" placeholder="Search photos...">
+        <p id="filter-status" class="status" aria-live="polite">Photos found:</p>
+        <div class="gallery">
+            <figure>
+                <img src="/images/cinnamoroll.jpg" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy from the Sanrio franchise sitting on a cloud with a blue sky background." />
+                <figcaption>Cinnamoroll sitting on a cloud</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-2.png" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy holding balloons with birds surrounding him." />
+                <figcaption>Cinnamoroll holding balloons</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-3.png" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy in a pink bow dreaming about sweets." />
+                <figcaption>Cinnamoroll in a pink bow</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-4.jpg" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy in a cat costume with family." />
+                <figcaption>Cinnamoroll in a cat costume</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-5.png" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy close-up face." />
+                <figcaption>Cinnamoroll close-up</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-6.jpg" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy holding a star on a cloud." />
+                <figcaption>Cinnamoroll holding a star</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-7.webp" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy holding a teddy bear for his son." />
+                <figcaption>Cinnamoroll with a teddy bear</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/cinnamoroll-8.png" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy smiling and holding a knife." />
+                <figcaption>Cinnamoroll smiling with a knife</figcaption>
+            </figure>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright &copy; <span id="current-year"></span> Evelyn Ngo</p>
+        <address>Contact me at <a href="mailto:evlinh.ngo@gmail.com">evlinh.ngo@gmail.com</a></address>
+    </footer>
+</body>
+</html>

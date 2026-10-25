@@ -1,0 +1,47 @@
+{
+    "name": "CIS 047 Web Development Course",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/cis047-course-template",
+    "remoteUser": "root",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "forwardPorts": [80, 3306],
+    "portsAttributes": {
+        "80": {
+            "label": "Web Application (HTTP)",
+            "onAutoForward": "notify"
+        },
+        "3306": {
+            "label": "MySQL Database",
+            "onAutoForward": "silent"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.vscode-live-server",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "felixbecker.php-debug",
+                "bmewburn.vscode-intellicode-api",
+                "felixbecker.php-intellisense",
+                "cweijan.vscode-mysql-client2"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "[php]": {
+                    "editor.defaultFormatter": "felixbecker.php-intellisense"
+                },
+                "php.validate.executablePath": "/usr/local/bin/php",
+                "php.validate.run": "onSave"
+            }
+        }
+    },
+    "postStartCommand": "chmod +x /workspaces/cis047-course-template/.devcontainer/*.sh && /workspaces/cis047-course-template/.devcontainer/startup.sh"
+}

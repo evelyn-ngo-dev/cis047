@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cis047-app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ..:/workspaces/cis047-course-template
+    environment:
+      - APACHE_DOCUMENT_ROOT=/workspaces/cis047-course-template/public
+      - PHP_IDE_CONFIG=serverName=localhost
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - cis047-network
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+  db:
+    image: mysql:8.0
+    container_name: cis047-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: classdb
+      MYSQL_USER: cis047_user
+      MYSQL_PASSWORD: cis047_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ../database/sample.sql:/docker-entrypoint-initdb.d/sample.sql
+      - ./mysql.conf:/etc/mysql/conf.d/mysql.conf
+    networks:
+      - cis047-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      timeout: 20s
+      retries: 10
+      start_period: 10s
+
+networks:
+  cis047-network:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local

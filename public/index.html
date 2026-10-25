@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Welcome to Evelyn's Page!</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="list">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="/documents/Evelyn_Ngo_Resume.pdf">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Welcome to My Website!</h1>
+    </header>
+    <main id="main-content">
+        <section>
+            <h2 id="introduction">Introduction</h2>
+                <p>Hi! My name is Evelyn.</p>
+                <p>I am currently enrolled in CIS 047 taught at San Jos&eacute; City College.</p>
+                <p>I'm an aspiring UX designer with a graphic design and business background.</p>
+                <p>I hope to gain web development skills to make personal projects for fun.</p>
+                <p>In this class, I want to learn more about CSS to create an aesthetically pleasing website.</p>
+        </section>
+        <section>
+            <h2 id="fun-facts">P.S. Fun Facts</h2>
+            <ul>
+                <li>I love swimming and worked as a lifeguard during the summer.</li>
+                <li>With an art background, I've made an exhibition for fun.</li>
+                <li>And Cinnamoroll is my favorite character from the Sanrio franchise!</li>
+            </ul>
+        </section>
+        <button type="button"
+                id="details-button"
+                aria-controls="details"
+                aria-expanded="false">
+            Show Details
+        </button>
+        <section id="details" hidden>
+            <h2 id="hide-image">Reference Image</h2>
+            <figure>
+                 <img src="/images/cinnamoroll.jpg" class="image" width="300" height="300" alt="Cinnamoroll, a beloved white fluffy puppy from the Sanrio franchise sitting on a cloud with a blue sky background." />
+                 <figcaption>A cute Cinnamoroll out in the wild.</figcaption>
+                 <a class="button-link" href="../gallery.html">Click here for more!</a>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; <span id="current-year"></span> Evelyn Ngo</p>
+        <address>Contact me at <a href="mailto:evlinh.ngo@gmail.com">evlinh.ngo@gmail.com</a></address>
+    </footer>
+</body>
+</html>
