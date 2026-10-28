@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/ssi/styles.css">
+</head>
+<body>
+    <!--#include file="includes/header.html" -->
+
+    <main>
+        <h1>This is my website!</h1>
+        <p>
+            It's currently
+            <!--#config timefmt="%A, %B %e, %Y, at %I:%M:%S %p %Z" -->
+            <!--#echo var="DATE_LOCAL" -->.
+        </p>
+    </main>
+
+    <!--#include file="includes/footer.shtml" -->
+</body>
+</html>

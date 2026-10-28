@@ -1,0 +1,43 @@
+/* Shared styles for every page in the ssi folder */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.site-header {
+    padding: 1rem;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    color: #990000;
+    text-align: center;
+    background: #ffc;
+}
+
+.site-name {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main,
+.site-footer {
+    /* Full width minus 2rem on small screens; never wider than 60rem */
+    width: min(100% - 2rem, 60rem);
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    background: #fcf;
+}
+
+.site-footer {
+    text-align: center;
+    background: #99f;
+}

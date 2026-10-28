@@ -24,7 +24,8 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 # Enable Apache modules
 RUN a2enmod rewrite && \
     a2enmod headers && \
-    a2enmod ssl
+    a2enmod ssl && \
+    a2enmod include
 
 # Set the Apache document root to the public folder
 ENV APACHE_DOCUMENT_ROOT=/workspaces/cis047-course-template/public
@@ -34,6 +35,11 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' \
     /etc/apache2/sites-available/*.conf && \
     sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' \
     /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+# Allow the SSI settings in public/.htaccess to apply.
+RUN printf '<Directory %s>\n    AllowOverride Options FileInfo\n</Directory>\n' "$APACHE_DOCUMENT_ROOT" \
+    > /etc/apache2/conf-available/public-overrides.conf && \
+    a2enconf public-overrides
 
 # Configure PHP for development
 RUN echo "display_errors = On" >> /usr/local/etc/php/conf.d/99-custom.ini && \
