@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Evelyn's Page!</title>
     <link rel="stylesheet" href="/ssi/styles.css">
 </head>
 <body>
-    <!--#include file="includes/header.html" -->
     <nav class="nav-bar">
         <div class="list">
             <ul>
@@ -17,7 +17,7 @@
         </div>
     </nav>
     <header>
-        <h1>Welcome to My Website!</h1>
+        <!--#include file="includes/header.html" -->
     </header>
     <main>
         <p>

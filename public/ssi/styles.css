@@ -46,23 +46,23 @@ section#nav-bar{
 body {
     font-family: var(--font-family);
     background: rgb(40, 52, 90);
-    color: var(--font-color);
+    color: #0c2a6b;
 }
 
-h1 {
+.site-header {
     text-align: center;
     border: solid thin #0c2a6b;
     border-radius: 15px;
     background: rgb(233, 237, 255);
     color: rgb(2, 3, 27);
     width: 68%;
-    margin: 1em auto;
     padding: 1em;
+    margin: 1em auto;
 }
 
 
 .site-name {
-    margin: 0;
+    margin: 1em auto;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -73,7 +73,7 @@ main,
     width: min(100% - 2rem, 60rem);
     margin: 1rem auto;
     padding: 1rem;
-    border: 1px solid #000;
+    border: 1px solid #0c2a6b;
     border-radius: 1rem;
     background: #fcf;
 }
