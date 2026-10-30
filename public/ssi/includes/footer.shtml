@@ -1,5 +1,11 @@
 <footer class="site-footer">
     <p>
+        <!--#if expr="%{TIME_HOUR} -lt 12" -->Good morning!
+        <!--#elif expr="%{TIME_HOUR} -lt 18" -->Good afternoon!
+        <!--#else -->Good evening!
+        <!--#endif -->
+    </p>
+    <p>
         Copyright &copy;
         <!--#config timefmt="%Y" --><!--#echo var="DATE_LOCAL" -->
         Evelyn Ngo

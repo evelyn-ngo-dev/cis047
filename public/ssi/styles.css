@@ -5,20 +5,61 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
+:root {
+    --border: solid thin #0c2a6b;
+    --font-family: Arial;
+    --font-color: rgb(205, 230, 255);
 }
 
-.site-header {
-    padding: 1rem;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-variant: small-caps;
-    color: #990000;
-    text-align: center;
-    background: #ffc;
+section#nav-bar{
+    box-sizing: border-box;
+    background: rgb(2, 3, 27);
+    padding: 10px;
 }
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(9, 21, 64);
+    padding: 2px;
+    color: var(--font-color); 
+    width: 100%;
+}
+.list {
+    display: flex;
+    list-style: none;
+    margin-left: 600px;
+    gap: 20rem;
+    padding: 10px;
+    font-size: 12px;
+}
+.list a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.list ul{
+    display: flex;
+    list-style: none;
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--font-family);
+    background: rgb(40, 52, 90);
+    color: var(--font-color);
+}
+
+h1 {
+    text-align: center;
+    border: solid thin #0c2a6b;
+    border-radius: 15px;
+    background: rgb(233, 237, 255);
+    color: rgb(2, 3, 27);
+    width: 68%;
+    margin: 1em auto;
+    padding: 1em;
+}
+
 
 .site-name {
     margin: 0;
